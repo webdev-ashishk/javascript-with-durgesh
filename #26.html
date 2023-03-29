@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>app</title>
+    <!-- css added -->
+    <style>
+      h1 {
+        text-align: center;
+        color: blue;
+      }
+      /* .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid red;
+      } */
+      #btn {
+        margin-left: 10px;
+      }
+      #footer {
+        display: block;
+        /* border: 2px solid green; */
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Todo App</h1>
+    </div>
+    <div class="container">
+      <input id="iField" type="text" placeholder="add todo" />
+      <button id="btn" onclick="newTD()">AddToDo</button>
+
+      <div id="footer">
+        <p>list of todo's</p>
+      </div>
+    </div>
+
+    <!-- javascript added -->
+    <script>
+      function newTD() {
+        let _iField = document.getElementById("iField").value;
+        let createEle = document.createElement("div");
+        let footer = document.getElementById("footer");
+        // alert(iField);
+        // console.log(createEle);
+        createEle.innerHTML = _iField;
+        footer.appendChild(createEle);
+        // console.log(_iField);
+      }
+    </script>
+  </body>
+</html>
