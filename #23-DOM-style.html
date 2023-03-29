@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-STYLE</title>
+    <style>
+      .heading-two {
+        color: green;
+        /* border: 2px dotted red; */
+        /* background-color: #262626; */
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="nightMode()">nightMode</button>
+    <button onclick="dayMode()">dayMode</button>
+    <button onclick="changeStyle()">changeStyle</button>
+
+    <h1 id="headingOne">Learning DOM-Style</h1>
+    <span class="heading-two"
+      ><h2 id="headingTwo">instructure name: durgesh</h2></span
+    >
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
+      repellat deleniti, repudiandae recusandae eaque officia at non consequatur
+      nam adipisci iste molestias perferendis iure quaerat cum porro aspernatur,
+      quia, aut nesciunt! Repudiandae excepturi maiores vero eum libero amet
+      quis non quibusdam aliquam! Laudantium voluptatum beatae veritatis culpa
+      velit exercitationem praesentium, nesciunt ipsam tempore hic, officia
+      aspernatur, reprehenderit ullam cupiditate iusto reiciendis quod? Cumque
+      nihil recusandae cupiditate blanditiis tempore ratione error magnam!
+      Doloribus inventore sed fugiat delectus, consequatur dignissimos magnam
+      optio! Corporis quod quo eum? Maiores id quasi deserunt sunt eum, quidem
+      ipsa odio ipsam consequuntur! Qui delectus alias iste. Inventore accusamus
+      obcaecati rerum expedita magnam aut exercitationem odit unde dolor ipsum
+      quod, labore dolorum, alias totam laboriosam, non assumenda aliquam sit
+      illum libero ea. Quasi accusantium iure doloremque beatae quia incidunt
+      quam animi soluta voluptates similique qui placeat est voluptatibus
+      reprehenderit architecto voluptatem, perferendis maiores totam rem?
+      Consectetur pariatur assumenda reprehenderit? Tempora, totam error!
+      Officia ipsa architecto blanditiis. Laudantium, aut quis? Ullam
+      dignissimos voluptas error quisquam laborum veniam ducimus illum expedita
+      nam porro. Ipsam dignissimos placeat sapiente labore libero nobis,
+      doloremque laboriosam eos minus quos ab, pariatur dolor adipisci natus at
+      est voluptate blanditiis. Cupiditate rerum neque harum perferendis
+      quisquam?
+    </p>
+    <script>
+      const nightMode = () => {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+      };
+      const dayMode = () => {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+      };
+
+      // change style of page
+      let headingOne = document.getElementById("headingOne");
+      let headingTwo = document.getElementById("headingTwo");
+      let para = document.getElementById("para");
+      const changeStyle = () => {
+        headingOne.style.textAlign = "center";
+        headingOne.style.fontSize = "40px";
+        headingOne.style.fontWeight = "bold";
+        headingOne.style.color = "blue";
+        headingOne.style.textTransform = "upper";
+        headingTwo.style.textTransform = "upper";
+        // headingTwo.style.color = "red";
+        headingTwo.style.fontSize = "55px";
+        headingOne.style.backgroundColor = "#e2e2e2";
+        para.style.fontSize = "40px";
+        para.style.border = "2px solid red";
+        para.style.padding = "40px";
+        //  added exising css
+        headingTwo.className = headingTwo.className + "heading-two";
+      };
+    </script>
+  </body>
+</html>
