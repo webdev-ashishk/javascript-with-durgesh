@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css codes are Here! -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+    <title>task1</title>
+  </head>
+  <body>
+    <h1>welcome to Awesome placeholders</h1>
+    <form action="">
+      <label for="first"> Name: </label>
+      <input id="first" type="text" placeholder="write Your Name" /><br />
+      <label for="second"> Branch: </label>
+      <input id="second" type="text" placeholder="write Your Branch" /><br />
+      <label for="third"> college: </label>
+      <input id="third" type="text" placeholder="write Your college" />
+      <button type="submit" onclick="fire()">submit</button>
+    </form>
+    <!-- javascript code are Here! -->
+    <script>
+      function fire() {
+        const first = document.getElementById("first").value;
+        const second = document.getElementById("second").value;
+        const third = document.getElementById("third").value;
+        const createEle = document.createElement("div");
+        createEle.appendChild(first);
+        createEle.append(first);
+      }
+    </script>
+  </body>
+</html>
