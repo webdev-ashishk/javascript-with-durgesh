@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#40</title>
+  </head>
+  <body>
+    <!-- <----------onclick-Event------------->
+    <button onclick="myClick()">onclick</button>
+
+    <!----------onFocus-Event----------------->
+    <!----------onkeyup-Event----------------->
+    <input
+      onfocus="colorChange()"
+      onkeyup="update_text()"
+      type="text"
+      placeholder="onfocus or onkeyup"
+      id="iField"
+    />
+    <h1 id="heading">input field data come here!</h1>
+    <script>
+      const myClick = () => {
+        alert("onclick!");
+      };
+      const colorChange = () => {
+        const inputField = document.getElementById("iField");
+        // alert("done!");
+        inputField.style.backgroundColor = "#e2e2e2";
+      };
+
+      const update_text = () => {
+        const data = document.getElementById("iField").value;
+        document.getElementById("heading").innerHTML = data;
+      };
+    </script>
+  </body>
+</html>
