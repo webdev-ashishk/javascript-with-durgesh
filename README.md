@@ -9,6 +9,6 @@ Learning javascript with durgesh resource
 
 - https://stackoverflow.com/questions/27079598/error-failed-to-execute-appendchild-on-node-parameter-1-is-not-of-type-no
 
-#42 WebStore
+# 42 WebStore
 * very good resource for learning webstorage !
 https://javascript.info/localstorage
