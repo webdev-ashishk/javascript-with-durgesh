@@ -15,24 +15,17 @@
   </head>
   <body>
     <h1>welcome to Awesome placeholders</h1>
-    <form action="">
-      <label for="first"> Name: </label>
-      <input id="first" type="text" placeholder="write Your Name" /><br />
-      <label for="second"> Branch: </label>
-      <input id="second" type="text" placeholder="write Your Branch" /><br />
-      <label for="third"> college: </label>
-      <input id="third" type="text" placeholder="write Your college" />
-      <button type="submit" onclick="fire()">submit</button>
-    </form>
+    <label for="first"> Name: </label>
+    <input id="first" type="text" placeholder="write Your Name" /><br />
+    <button onclick="fire()">Done</button>
     <!-- javascript code are Here! -->
     <script>
       function fire() {
         const first = document.getElementById("first").value;
-        const second = document.getElementById("second").value;
-        const third = document.getElementById("third").value;
         const createEle = document.createElement("div");
-        createEle.appendChild(first);
-        createEle.append(first);
+        createEle.innerHTML = first;
+        console.log(createEle);
+        document.body.appendChild(createEle);
       }
     </script>
   </body>
