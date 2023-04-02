@@ -69,7 +69,14 @@ const nObj = {
 console.table(nObj);
 console.log(nObj);
 //-------------8.Promises in js------------------------>
-
+/*
+Promise used for async functioon
+"I Promise a Result!"
+"Producing code" is code that can take some time
+"Consuming code" is code that must wait for the result
+A Promise is a JavaScript object that links producing code and consuming code
+A JavaScript Promise object contains both the producing code and calls to the consuming code:
+*/
 //-------------9.Classes in js------------------------>
 /* class is template for an object */
 class myClass {
