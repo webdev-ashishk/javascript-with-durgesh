@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <title>NGG</title>
+  </head>
+  <style>
+    #section2 {
+      display: none;
+    }
+    #section3 {
+      display: none;
+    }
+  </style>
+  <body>
+    <h1>Number Guess Game</h1>
+    <!-- section-one -->
+    <div id="section1" class="container text-center mt-5">
+      <button
+        class="btn btn-warning btn-lg"
+        onclick="generate_number_btn_click()"
+      >
+        Generate Number
+      </button>
+    </div>
+    <!-- section2 -->
+    <div id="section2" class="container">
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <img
+            style="width: 250px"
+            src="https://media.tenor.com/uwM19dpkVLsAAAAC/question-mark-thinking.gif"
+            alt=""
+          />
+          <p class="text-danger">Guess the number b/t 1 to 6</p>
+          <div class="form-group w-25 mx-auto">
+            <input
+              id="ifield"
+              type="text"
+              placeholder="Enter"
+              class="form-control"
+            />
+          </div>
+          <button onclick="check()" class="btn btn-primary btn-sm mt-4">
+            check
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- section3 -->
+    <div id="section3" class="container text-center">
+      <img src="rolling-dice.gif" alt="" />
+      <p>Generating number...</p>
+    </div>
+    <script>
+      let number;
+      const generate_number = () => {
+        let n1 = Math.random();
+        let oneDigit = n1 * 10;
+        oneDigit = Math.trunc(oneDigit);
+        oneDigit = (oneDigit % 6) + 1;
+        number = oneDigit;
+        console.log(number);
+      };
+      generate_number();
+      const generate_number_btn_click = () => {
+        document.querySelector("#section1").style.display = "none";
+        document.querySelector("#section2").style.display = "none";
+        document.querySelector("#section3").style.display = "block";
+        setTimeout(() => {
+          generate_number();
+          document.getElementById("ifield").value = "";
+          document.querySelector("#section1").style.display = "none";
+          document.querySelector("#section2").style.display = "block";
+          document.querySelector("#section3").style.display = "none";
+        }, 3000);
+      };
+      const check = () => {
+        let value = document.getElementById("ifield").value;
+        if (value == number) {
+          alert("congratulation!");
+        } else {
+          alert("Better-luck-next-time");
+        }
+        generate_number_btn_click();
+      };
+    </script>
+  </body>
+</html>
