@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo-App</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: blue;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid red;
+        /* width: 800px; */
+        margin: 5px 15px;
+        justify-content: center;
+        align-items: center;
+        /* margin-bottom: 30px; */
+      }
+      .title {
+        /* width: 100%; */
+        margin: 5px;
+      }
+      .description {
+        font-size: xx-large;
+      }
+      .btn-area {
+        margin-top: 10px;
+        font-size: xx-large;
+        padding: 10px;
+      }
+      .btn-area button {
+        font-size: 2rem;
+        background-color: blue;
+        color: white;
+        border: 2px solid red;
+        border-radius: 2rem;
+      }
+      button:hover {
+        /* color: red; */
+        background-color: lightgreen;
+        border: 2px solid red;
+        cursor: pointer;
+      }
+      .ifield {
+        font-size: 2rem;
+        /* width: 70%; */
+        width: 1000px;
+      }
+      .tarea {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To Do APPLICATION</h1>
+    <div class="container">
+      <div class="title">
+        <input type="text" placeholder="add title" class="ifield" />
+      </div>
+      <div class="description">
+        <textarea
+          class="tarea"
+          name=""
+          id="tarea"
+          cols="50"
+          rows="5"
+          placeholder="description"
+        ></textarea>
+      </div>
+      <div class="btn-area">
+        <button>ADD TODO</button>
+      </div>
+    </div>
+  </body>
+</html>
