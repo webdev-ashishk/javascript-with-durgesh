@@ -1,4 +1,5 @@
 # Number Guess Game
+### Build by HTML5,CSS3,BOOTSTRAP5, Vanilla JAVASCRIPT
 * Home page of website
 ![1](https://user-images.githubusercontent.com/127021921/229461380-091ef8ee-0181-4f05-b53f-c5cffe718662.png)
 
