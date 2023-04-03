@@ -1,3 +1,5 @@
+document.getElementById("section2").style.display = "none";
+document.getElementById("section3").style.display = "none";
 let number;
 const generate_number = () => {
   let n1 = Math.random();

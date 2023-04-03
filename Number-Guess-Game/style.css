@@ -1,6 +1,13 @@
-#section2 {
-  display: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-#section3 {
-  display: none;
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: blue;
+}
+.mt-50 {
+  margin-top: 100px;
 }
