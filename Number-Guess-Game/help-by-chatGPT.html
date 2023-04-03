@@ -4,33 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gpt</title>
+    <title>createMode</title>
+    <style>
+      .hide {
+        display: flex;
+        flex-direction: column;
+        width: 11%;
+      }
+      #mode {
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #day {
+        background-color: #fff;
+        color: rgb(238, 45, 7);
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #night {
+        background-color: black;
+        cursor: pointer;
+        color: yellow;
+        border-radius: 5px;
+      }
+    </style>
   </head>
-  <style>
-    #bdiv{
-      display: flex;
-      flex-direction: column;
-      color: blue;
-    }
-  </style>
   <body>
-    <button id="btn">
-      Mode
-    </button>
-    <div id="bdiv"></div>
-      <script>
-        const btn = document.getElementById("btn");
-        btn.addEventListener("click", () => {
-          const bdiv = document.getElementById("bdiv");
-          bdiv.innerHTML = `<div class="button-container">
-       <div id="btn1"> <button>Night Mode</button></div>
-       <div id=btn2> <button>Day Mode</button></div>
-        
+    <h3 style="text-align: center">CreateMode</h3>
+    <div class="btn-container">
+      <button id="mode">Mode's</button>
+      <div class="hide">
+        <button onclick="nightfun()" id="night">Night</button>
+        <button onclick="dayfun()" id="day">Day</button>
       </div>
-        `;
-
-        });
-      </script>
-    </button>
+    </div>
+    <script>
+      const day = document.getElementById("day");
+      const night = document.getElementById("night");
+      day.style.display = "none";
+      night.style.display = "none";
+      const mode = document.getElementById("mode");
+      mode.addEventListener("click", () => {
+        day.style.display = "block";
+        night.style.display = "block";
+      });
+      const dayfun = () => {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "red";
+      };
+      const nightfun = () => {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "yellow";
+      };
+    </script>
   </body>
 </html>
