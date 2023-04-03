@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>gpt</title>
   </head>
+  <style>
+    #bdiv{
+      display: flex;
+      flex-direction: column;
+      color: blue;
+    }
+  </style>
   <body>
     <button id="btn">
       Mode
@@ -16,13 +23,12 @@
         btn.addEventListener("click", () => {
           const bdiv = document.getElementById("bdiv");
           bdiv.innerHTML = `<div class="button-container">
-        <button>Button 1</button>
-        <button>Button 2</button>
+       <div id="btn1"> <button>Night Mode</button></div>
+       <div id=btn2> <button>Day Mode</button></div>
+        
       </div>
         `;
 
-          //  createEle.appendChild(txtNode)
-          // console.log(createEle);
         });
       </script>
     </button>
