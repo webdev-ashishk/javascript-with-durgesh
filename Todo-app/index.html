@@ -25,6 +25,7 @@
         margin: 5px;
       }
       .description {
+        margin: 5px;
         font-size: xx-large;
       }
       .btn-area {
@@ -53,27 +54,80 @@
       .tarea {
         font-size: 2rem;
       }
+      .result {
+        text-align: center;
+        font-size: 2rem;
+        color: blue;
+        background-color: skyblue;
+        border-radius: 2rem;
+      }
+      /*------------ added media query for responsiveness ---------------  */
+
+      /* If the screen size is 601px or more, set the font-size of <div> to 80px */
+      @media only screen and (min-width: 601px) {
+        div.example {
+          font-size: 80px;
+        }
+      }
+
+      /* If the screen size is 600px or less, set the font-size of <div> to 30px */
+      @media only screen and (max-width: 600px) {
+        .title-desc {
+          margin: 0px 30px;
+          width: 500px;
+        }
+        .title {
+          width: 20%;
+        }
+      }
     </style>
   </head>
   <body>
     <h1>To Do APPLICATION</h1>
     <div class="container">
-      <div class="title">
-        <input type="text" placeholder="add title" class="ifield" />
-      </div>
-      <div class="description">
-        <textarea
-          class="tarea"
-          name=""
-          id="tarea"
-          cols="50"
-          rows="5"
-          placeholder="description"
-        ></textarea>
+      <div class="title-desc">
+        <div class="title">
+          <input
+            type="text"
+            placeholder="add title"
+            class="ifield"
+            id="_ifield"
+          />
+        </div>
+        <div class="description">
+          <textarea
+            class="tarea"
+            name=""
+            id="_tarea"
+            cols="50"
+            rows="5"
+            placeholder="description"
+          ></textarea>
+        </div>
       </div>
       <div class="btn-area">
-        <button>ADD TODO</button>
+        <button id="btn">ADD TODO</button>
       </div>
     </div>
+    <!-- <div class="result" id="_result"></div> -->
+    <script>
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        const inputField = document.getElementById("_ifield").value;
+        const textArea = document.getElementById("_tarea").value;
+        // console.log(inputField);
+        // console.log(textArea);
+        // let result = document.getElementById("_result");
+
+        const result = document.createElement("div");
+        result.innerHTML = `
+        <div class="store-todo" id="stodo">
+      <div class="stitle"><h2 id="_stitle">${inputField}</h2></div>
+      <div class="sdesc" id="_sdesc"><p>${textArea}</p></div>
+    </div>
+        `;
+        document.body.appendChild(result);
+      });
+    </script>
   </body>
 </html>
