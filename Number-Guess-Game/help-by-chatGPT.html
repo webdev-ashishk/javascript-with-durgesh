@@ -33,28 +33,32 @@
     <h3 style="text-align: center">CreateMode</h3>
     <div class="btn-container">
       <button id="mode">Mode's</button>
-      <div class="hide">
+      <div class="hide" id="twobtn">
         <button onclick="nightfun()" id="night">Night</button>
         <button onclick="dayfun()" id="day">Day</button>
       </div>
     </div>
     <script>
-      const day = document.getElementById("day");
-      const night = document.getElementById("night");
-      day.style.display = "none";
-      night.style.display = "none";
+      // const day = document.getElementById("day");
+      // const night = document.getElementById("night");
+      const twobtn = document.getElementById("twobtn");
+      twobtn.style.display = "none";
+      // night.style.display = "none";
       const mode = document.getElementById("mode");
       mode.addEventListener("click", () => {
-        day.style.display = "block";
-        night.style.display = "block";
+        // day.style.display = "block";
+        // night.style.display = "block";
+        twobtn.style.display = "block";
       });
       const dayfun = () => {
         document.body.style.backgroundColor = "white";
         document.body.style.color = "red";
+        twobtn.style.display = "none";
       };
       const nightfun = () => {
         document.body.style.backgroundColor = "black";
         document.body.style.color = "yellow";
+        twobtn.style.display = "none";
       };
     </script>
   </body>
