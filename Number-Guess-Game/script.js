@@ -31,3 +31,25 @@ const check = () => {
   }
   generate_number_btn_click();
 };
+
+//Mode's script file
+const h3 = document.getElementById("h3");
+const twobtn = document.getElementById("twobtn");
+twobtn.style.display = "none";
+
+const mode = document.getElementById("mode");
+mode.addEventListener("click", () => {
+  twobtn.style.display = "block";
+});
+const dayfun = () => {
+  document.body.style.backgroundColor = "white";
+  document.body.style.color = "red";
+  twobtn.style.display = "none";
+  h3.innerHTML = "Day Mode Created";
+};
+const nightfun = () => {
+  document.body.style.backgroundColor = "black";
+  document.body.style.color = "yellow";
+  twobtn.style.display = "none";
+  h3.innerHTML = "Night Mode Created";
+};

@@ -1,3 +1,4 @@
-# javascript-with-durgesh
+# Number Guess Game
 
-Learning javascript with durgesh
+- Home page of website
+  ![alt text](./image/Home.jpg)

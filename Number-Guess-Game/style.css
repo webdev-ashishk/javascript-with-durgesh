@@ -7,7 +7,32 @@ h1 {
   text-align: center;
   font-size: 4rem;
   color: blue;
+  margin: 20px;
 }
 .mt-50 {
-  margin-top: 100px;
+  margin-top: 20px;
+}
+/* //mode files css / */
+.hide {
+  display: flex;
+  flex-direction: column;
+  width: 11%;
+}
+#mode {
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 30px;
+}
+#day {
+  background-color: #fff;
+  color: rgb(238, 45, 7);
+  border-radius: 5px;
+  cursor: pointer;
+}
+#night {
+  background-color: black;
+  cursor: pointer;
+  color: yellow;
+  border-radius: 5px;
 }
