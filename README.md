@@ -1,2 +1,3 @@
 # javascript-with-durgesh
-Learning javascript with durgesh resource
+
+Learning javascript with durgesh
