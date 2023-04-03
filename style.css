@@ -25,12 +25,14 @@ h1 {
   font-size: 30px;
 }
 #day {
+  margin: 20px;
   background-color: #fff;
   color: rgb(238, 45, 7);
   border-radius: 5px;
   cursor: pointer;
 }
 #night {
+  margin: 20px;
   background-color: black;
   cursor: pointer;
   color: yellow;
