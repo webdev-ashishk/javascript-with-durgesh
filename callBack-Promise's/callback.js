@@ -1,5 +1,6 @@
 document.body.style.backgroundColor = "#262626";
 document.body.style.color = "white";
+document.body.style.textAlign = "center";
 // scenario
 //all the function should be executed in sequence
 /* 
@@ -125,7 +126,7 @@ function dUserData() {
     console.log("dUserData end");
   }, 1000);
 }
-
+//This is called callback hell becoz of too much nesting in login
 register(function () {
   sendEmail(() => {
     login(() => {
