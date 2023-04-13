@@ -11,88 +11,94 @@
     <!-- code will be exectured in sequece -->
     <!-- a,b,c,d,e should be exected in sequence with different delay's -->
     <script>
-               // const a = (callback) => {
-               //   setTimeout(() => {
-               //     console.log("a");
-               //     callback();
-               //   }, 2000);
-               // };
-               // const b = (callback) => {
-               //   setTimeout(() => {
-               //     console.log("b");
-               //     callback();
-               //   }, 3000);
-               // };
-               // const c = (callback) => {
-               //   setTimeout(() => {
-               //     console.log("c");
-               //     callback();
-               //   }, 4000);
-               // };
-               // const d = (callback) => {
-               //   setTimeout(() => {
-               //     console.log("d");
-               //     callback();
-               //   }, 5000);
-               // };
-               // const e = () => {
-               //   setTimeout(() => {
-               //     console.log("e");
-               //   }, 1000);
-               // };
-               // //This is not good approach it's  lead to callback hell problem
-               // a(function () {
-               //   b(function () {
-               //     c(function () {
-               //       d(function () {
-               //         e();
-               //       });
-               //     });
-               //   });
-               // });
+      // const a = (callback) => {
+      //   setTimeout(() => {
+      //     console.log("a");
+      //     callback();
+      //   }, 2000);
+      // };
+      // const b = (callback) => {
+      //   setTimeout(() => {
+      //     console.log("b");
+      //     callback();
+      //   }, 3000);
+      // };
+      // const c = (callback) => {
+      //   setTimeout(() => {
+      //     console.log("c");
+      //     callback();
+      //   }, 4000);
+      // };
+      // const d = (callback) => {
+      //   setTimeout(() => {
+      //     console.log("d");
+      //     callback();
+      //   }, 5000);
+      // };
+      // const e = () => {
+      //   setTimeout(() => {
+      //     console.log("e");
+      //   }, 1000);
+      // };
+      // //This is not good approach it's  lead to callback hell problem
+      // a(function () {
+      //   b(function () {
+      //     c(function () {
+      //       d(function () {
+      //         e();
+      //       });
+      //     });
+      //   });
+      // });
 
-               // console.log("exection is success!");
-
-               const a = () => {
-                 return new Promise(resolve,reject){
-                   setTimeout(() => {
-                     console.log("a");
-                     resolve();
-                   }, 2000);
-                 }
-               };
-               const b = () => {
-                return new Promise(resolve,reject){
-                  const c = () => {
-                    setTimeout(() => {
-                      console.log("c");
-                    }, 4000);
-                  }
-                };
-               };
-               const d = () => {
-        return new Promise(resolve,reject){
-
+      // console.log("exection is success!");
+      const a = () => {
+        return new Promise(resolve, reject)=>{
           setTimeout(() => {
-            console.log("d");
-          }, 5000);
+          console.log("a");
+          resolve();
+        }, 2000);
+        };
+      };
+      const b = () => {
+        return new Promise(resolve, reject)=>{
+          setTimeout(() => {
+          console.log("b");
+          resolve();
+        }, 2000);
         }
       };
-               const e = () => {
-                return new Promise(resolve,reject){
+      const c = () => {
+        return new Promise(resolve, reject)=>{
+          setTimeout(() => {
+          console.log("c");
+          resolve();
+        }, 2000);
+        }
+      };
+      const d = () => {
+        return new Promise(resolve, reject)=>{
+          setTimeout(() => {
+          console.log("d");
+          resolve();
+        }, 2000);
+        }
+      };
+      const e = () => {
+        return new Promise(resolve, reject)=>{
+          setTimeout(() => {
+          console.log("e");
+          resolve();
+        }, 2000);
+        }
+      };
+      a()
+      .then(b)
+      .then(c)
+      .then(d)
+      .then(e)
 
-                  setTimeout(() => {
-                    console.log("e");
-                  }, 1000);
-                }
-               };
-              a()
-              .then(b)
-              .then(c)
-              .then(d)
-              .then(e)
-
-               console.log("exection is success!");
+      console.log("exection is success!");
     </script>
   </body>
 </html>
